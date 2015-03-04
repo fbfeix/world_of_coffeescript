@@ -5,3 +5,122 @@ Description: Template to the webpage worldofcoffeescript.com/.de/...
 Author: Felix Astner
 Author URI: http://www.felixastner.de/
 */
+
+html {                        
+                font-size: 12px;
+                color: #2a0900;                
+                font-size: 12px;
+                font-weight: 400;
+                letter-spacing: 1.5;
+            }
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            div#content-positioneer {
+                padding-top: 10px;
+                margin: 0px auto;
+                width: 1000px;   
+                background-image: url("imgs/Ebene 2.png"), url("imgs/Ebene 1.png");
+                background-repeat: no-repeat, no-repeat;
+                background-position: top left, right bottom; 
+                display: flex;
+            }
+            
+            div#content-positioneer #center-stackpanel {
+                width: 600px;
+            }
+            
+            div#content-positioneer #left-sided-menu {
+                min-width: 200px;
+                width: auto;
+                display: block;
+                padding-top: 190px;
+                align-self: flex-start;
+            }
+
+            #left-sided-menu ul {
+                list-style: none;
+                padding-left: 10px;
+                padding-top: 5px;
+                margin: 0px;
+            }
+            
+            #left-sided-menu ul li h3 {                
+                margin-bottom: 5px;
+            }
+
+            div#content-positioneer #right-sided-panel {
+                width: auto;
+                display: block;
+                margin: 0px 10px;
+                margin-top: 50px;
+                border: 1px solid #eee;
+                background: rgba(255, 255, 255, 0.63);
+                align-self: flex-start;
+            }
+            article#article {
+                border: 1px solid #eee;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.63);
+                font-weight: 400;            
+            }
+            
+            header {
+                display: flex;
+            }
+            
+            header > div {
+                vertical-align: middle;
+                width: 50%;
+            }
+            #header-stackpanel p {
+                margin-left: 38px;
+                color: #7e3926;                
+                font-size:16px;
+                font-weight: 400;                    
+                width: 81px;
+                height: 12px;
+                margin: 0px;
+                padding: 0px;
+                letter-spacing: 2;
+            }
+            
+            #header-stackpanel h1 {
+                margin: 0px;
+                margin-left: 60px;
+                font-size: 30px;
+                color: #7f1d02;                
+                font-size: 30px;
+                font-weight: 400;
+                height:28px;
+                width: 209px;
+                padding: 0px;
+                letter-spacing: 2;
+                margin-bottom: 10px;
+            }
+            
+            #search-form {
+                text-align: right;
+            }
+            
+            #search-form input {
+                height: 29px;
+                width: 204px;  
+                border: 1px solid #eee;
+                border-radius: 2px;
+            }
+            
+            #search-form input[type=submit] {
+                display: none;
+            }
+            
+            #center-stackpanel {
+                
+            }
+            
+            a {
+                color: #0080ff;
+                text-decoration: none;
+            }
