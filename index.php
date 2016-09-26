@@ -17,21 +17,25 @@
                         <h1>Coffeescript</h1>
                     </div>
                     <div id="search-form">
-                        <input type="search" placeholder="Search for article..." />
-                        <input type="submit" />
+                        <form action="" method="post">
+                            <form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                <input type="search" placeholder="Search for article..." value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s"/>
+                                <input type="submit" />
+                            </form>
+                        </form>
                     </div>                    
                 </header>
                 <article id="article" >                    
                     
- <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-       <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-       <div class="entry">
-          <?php the_content(); ?>
-       </div>
-    <?php endwhile; ?>
-       <p align="center"><?php next_posts_link('&laquo; &Auml;ltere Eintr&auml;ge') ?>  <?php
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+<div class="entry">
+<?php the_content(); ?>
+</div>
+<?php endwhile; ?>
+<p align="center"><?php next_posts_link('&laquo; &Auml;ltere Eintr&auml;ge') ?>  <?php
 previous_posts_link('Neuere Eintr&auml;ge &raquo;') ?></p>
-    <?php endif; ?>
+<?php endif; ?>
                     
                                         
                     <?php do_action('wp_footer'); ?>
@@ -40,10 +44,17 @@ previous_posts_link('Neuere Eintr&auml;ge &raquo;') ?></p>
                 </article>
             </div>
             <div id="right-sided-panel">
-            <!-- should be used for advertising etc. -->
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- adsensepanel-world-of-coffeescript -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:160px;height:600px"
+                 data-ad-client="ca-pub-8855735265372980"
+                 data-ad-slot="3085608956"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
             </div>
         </div>
-        <script src="//use.typekit.net/phn3blz.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+        <?php get_footer(); ?>
     </body>
 </html>
